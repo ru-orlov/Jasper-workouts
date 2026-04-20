@@ -7,7 +7,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JasperdemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JasperdemoApplication.class, args);
+
+
+        SpringApplication.run(JasperdemoApplication.class, args);
+
+        System.setProperty(
+                "javax.xml.parsers.DocumentBuilderFactory",
+                "org.apache.xerces.jaxp.DocumentBuilderFactoryImpl"
+        );
+        org.springframework.boot.SpringApplication.run(JasperdemoApplication.class, args);
 	}
 
 }
